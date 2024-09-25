@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5);
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.title {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 0 0 5px black;;
+}
+
+section {
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.verse {
+  color: rgb(218, 215, 59);
+}
+
+.verse-text {
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.nav-header {
+  /* width: 200px; */
+  display: inline-flex;
+  display: inline-block;
+  nav ul {
+    margin: 20px;
+    list-style-type: none;
+    padding: 0;
+    list-style-type: none;
+  }
+  nav li a{
+      width: 1.2em;
+      text-decoration: none;
+      &.grow {
+        transition: all .2s ease-in-out;
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+  }
+}
+
+
+nav a {
+  text-decoration: none;
+}
+
+/* nav li {
+  color: #000;
+  padding: 20px;
+  font-size: 1.2rem;
+  display: inline-block;
+
+  &.grow {
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: scale(2);
+    }
+  }
+} */
+
+/* Change the link color on hover */
+/* li a:hover {
+  font-size:2rem;
+  transition: all .2s ease-in-out;
+  transform: scale(2);
+} */
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.footer {
+  background-color: #6699FF;
+  color: #FFFFFF;
+  font-family: 'Droid Sans', sans-serif;
+  text-align: center;
+  padding: 1.5em;
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  ul {
+    padding: 0;
+    font-size: 2em;
+
+    li {
+      display: inline-block;
+      width: 1.2em;
+
+      &.grow {
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
